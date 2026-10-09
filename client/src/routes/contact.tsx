@@ -45,7 +45,11 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/enquiries", {
+      const API_URL = import.meta.env.VITE_API_URL;
+      if (!API_URL) { 
+        throw new Error("VITE_API_URL is not configured"); 
+      }
+      const response = await fetch(`${API_URL}/api/enquiries`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

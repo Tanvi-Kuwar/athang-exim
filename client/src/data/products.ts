@@ -13,8 +13,10 @@ import coriander from "@/assets/p-coriander.jpg";
 import cardamom from "@/assets/p-cardamom.jpg";
 import cinnamon from "@/assets/p-cinnamon.jpg";
 import other from "@/assets/p-other.jpg";
+import cotton from "@/assets/p-cotton.jpg";
+import engineering from "@/assets/p-engineering.jpg";
 
-export type Category = "Fresh Produce" | "Fruits" | "Spices" | "Other Products";
+export type Category = "Fresh Produce" | "Fruits" | "Spices" | "Other Products" | "Cotton" | "Engineering Products";
 export type Product = {
   slug: string;
   name: string;
@@ -41,6 +43,8 @@ export const products: Product[] = [
   { slug: "cardamom", name: "Cardamom", category: "Spices", image: cardamom, short: "Green cardamom pods.", description: "Green cardamom pods selected by size and colour for trade supply." },
   { slug: "cinnamon", name: "Cinnamon", category: "Spices", image: cinnamon, short: "Fragrant cinnamon quills.", description: "Cinnamon sticks sourced for aroma and quill quality." },
   { slug: "other-commodities", name: "Other Agricultural Commodities", category: "Other Products", image: other, short: "Seasonal and specialty commodities on request.", description: "Additional seasonal and specialty agricultural commodities can be sourced based on buyer requirements." },
+  { slug: "cotton", name: "Cotton", category: "Cotton", image: cotton, short: "Quality cotton for textile and industrial requirements.", description: "Cotton supplied to B2B buyers according to quality, grade, and quantity requirements."},
+  { slug: "engineering-products", name: "Engineering Products", category: "Engineering Products", image: engineering, short: "Engineering products sourced for industrial requirements.", description: "Engineering products sourced for industrial and commercial buyers based on technical specifications and order requirements."},
 ];
 
 export const featured = products.slice(0, 12);

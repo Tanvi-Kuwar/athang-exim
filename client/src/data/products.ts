@@ -13,8 +13,8 @@ import coriander from "@/assets/p-coriander.jpg";
 import cardamom from "@/assets/p-cardamom.jpg";
 import cinnamon from "@/assets/p-cinnamon.jpg";
 import other from "@/assets/p-other.jpg";
-import cotton from "@/assets/p-cotton.jpg";
-import engineering from "@/assets/p-engineering.jpg";
+import cotton from "@/assets/p-cotton.avif";
+import engineering from "@/assets/p-engineering.avif";
 
 export type Category = "Fresh Produce" | "Fruits" | "Spices" | "Other Products" | "Cotton" | "Engineering Products";
 export type Product = {

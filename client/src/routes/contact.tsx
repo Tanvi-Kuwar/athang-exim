@@ -66,10 +66,16 @@ function Contact() {
       setState("done");
       form.reset();
     } catch (error) {
-      console.error("Enquiry submission failed:", error);
-      alert("Unable to submit enquiry. Please try again.");
-      setState("idle");
-    }
+        console.error("Enquiry submission failed:", error);
+
+        alert(
+          error instanceof Error
+            ? error.message
+            : "Unknown error occurred"
+        );
+
+        setState("idle");
+      }
   };
   return (
     <>

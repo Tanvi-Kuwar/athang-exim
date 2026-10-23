@@ -45,11 +45,15 @@ function Contact() {
     };
 
     try {
+<<<<<<< HEAD
       const API_URL = import.meta.env.VITE_API_URL;
       if (!API_URL) { 
         throw new Error("VITE_API_URL is not configured"); 
       }
       const response = await fetch(`${API_URL}/api/enquiries`, {
+=======
+      const response = await fetch("http://localhost:5000/api/enquiries", {
+>>>>>>> aa599d7 (Save local changes)
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,6 +70,7 @@ function Contact() {
       setState("done");
       form.reset();
     } catch (error) {
+<<<<<<< HEAD
         console.error("Enquiry submission failed:", error);
 
         alert(
@@ -76,6 +81,12 @@ function Contact() {
 
         setState("idle");
       }
+=======
+      console.error("Enquiry submission failed:", error);
+      alert("Unable to submit enquiry. Please try again.");
+      setState("idle");
+    }
+>>>>>>> aa599d7 (Save local changes)
   };
   return (
     <>

@@ -4,8 +4,10 @@ import hero from "@/assets/hero.jpg";
 import field from "@/assets/field.jpg";
 import warehouse from "@/assets/warehouse.jpg";
 import { featured, products, getProduct } from "@/data/products";
+import { videos } from "@/data/videos";
 import { BtnLink, ProductCard, SectionHeading } from "@/components/site/ui";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,6 +114,46 @@ function Home() {
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((p) => <ProductCard key={p.slug} p={p} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEOS */}
+      <section className="bg-cream py-24">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Watch & Discover"
+            title="Our Videos"
+            subtitle="Explore our products, quality, and processes through videos."
+          />
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {videos.map((video) => (
+              <article key={video.id} className="group">
+                <div className="aspect-video overflow-hidden rounded-md bg-muted">
+                  <div className="aspect-video overflow-hidden rounded-md bg-muted">
+                    <video
+                      src={video.src}
+                      title={video.title}
+                      className="h-full w-full object-cover"
+                      controls
+                      preload="metadata"
+                      playsInline
+                    >
+                      Your browser does not support video playback.
+                    </video>
+                  </div>
+                </div>
+
+                <h3 className="mt-4 text-xl font-medium text-forest">
+                  {video.title}
+                </h3>
+
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {video.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

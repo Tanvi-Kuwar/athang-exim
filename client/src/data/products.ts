@@ -1,6 +1,6 @@
 import ginger from "@/assets/p-ginger.jpg";
 import garlic from "@/assets/p-garlic.jpg";
-import onion from "@/assets/p-onion.jpg";
+import onion from "@/assets/p-onion.jpeg";
 import tomato from "@/assets/p-tomato.jpg";
 import pomegranate from "@/assets/p-pomegranate.jpg";
 import guava from "@/assets/p-guava.jpg";
@@ -15,8 +15,15 @@ import cinnamon from "@/assets/p-cinnamon.jpg";
 import other from "@/assets/p-other.jpg";
 import cotton from "@/assets/p-cotton.avif";
 import engineering from "@/assets/p-engineering.avif";
+import rice from "@/assets/p-rice.jpeg";
 
-export type Category = "Fresh Produce" | "Fruits" | "Spices" | "Other Products" | "Cotton" | "Engineering Products";
+const jackfruit = "https://res.cloudinary.com/da5gy1rgl/image/upload/v1792606231/p-jackfruit.png";
+const banana = "https://res.cloudinary.com/da5gy1rgl/image/upload/v1792606231/p-banana.png";
+const greenChilli = "https://res.cloudinary.com/da5gy1rgl/image/upload/v1792606228/p-chilli.png";
+const pomegranate = "https://res.cloudinary.com/da5gy1rgl/image/upload/v1792606231/p-pomegranate.png";
+
+
+export type Category = "Fresh Produce" | "Grains" | "Fruits" | "Spices" | "Other Products" | "Cotton" | "Engineering Products";
 export type Product = {
   slug: string;
   name: string;
@@ -45,6 +52,11 @@ export const products: Product[] = [
   { slug: "other-commodities", name: "Other Agricultural Commodities", category: "Other Products", image: other, short: "Seasonal and specialty commodities on request.", description: "Additional seasonal and specialty agricultural commodities can be sourced based on buyer requirements." },
   { slug: "cotton", name: "Cotton", category: "Cotton", image: cotton, short: "Quality cotton for textile and industrial requirements.", description: "Cotton supplied to B2B buyers according to quality, grade, and quantity requirements."},
   { slug: "engineering-products", name: "Engineering Products", category: "Engineering Products", image: engineering, short: "Engineering products sourced for industrial requirements.", description: "Engineering products sourced for industrial and commercial buyers based on technical specifications and order requirements."},
+  { slug: "jackfruit", name: "Fresh Jackfruit", category: "Fruits", image: jackfruit, short: "Fresh jackfruit selected for quality and ripeness.", description: "Fresh jackfruit sourced for wholesale and B2B buyers, selected for quality, freshness and ripeness according to buyer requirements." },
+  { slug: "banana", name: "Fresh Banana", category: "Fruits", image: banana, short: "Fresh bananas selected for quality and ripeness.", description: "Fresh bananas supplied to wholesale and B2B buyers, selected for quality, size and ripeness according to market requirements." },
+  { slug: "green-chilli", name: "Fresh Green Chilli", category: "Fresh Produce", sub: "Vegetables", image: greenChilli, short: "Fresh green chillies with vibrant colour and pungency.", description: "Fresh green chillies supplied to wholesale and B2B buyers, selected for freshness, colour, quality and pungency according to buyer requirements."},
+  // { slug: "pomegranate", name: "Fresh Pomegranate", category: "Fruits", image: pomegranate, short: "Fresh pomegranates with rich colour and juicy arils.", description: "Fresh pomegranates sourced for wholesale and B2B buyers, selected for colour, size, freshness and quality according to buyer requirements." },
+  { slug: "rice", name: "Premium Rice", category: "Grains", image: rice, short: "Quality rice grains for wholesale and bulk buyers.", description: "Premium rice sourced for wholesale and B2B buyers, selected for grain size, texture, purity and quality according to buyer requirements." },
 ];
 
 export const featured = products.slice(0, 12);

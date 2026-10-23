@@ -17,12 +17,7 @@ export const Route = createFileRoute("/products/")({
   component: ProductsPage,
 });
 
-<<<<<<< HEAD
-const filters = ["All", "Fresh Produce", "Vegetables", "Fruits", "Spices", "Cotton", "Engineering Products", "Other Products"] as const;
-=======
-const filters = ["All", "Fresh Produce", "Vegetables", "Fruits", "Spices", "Cotton","Engineering Products","Other Products"] as const;
->>>>>>> aa599d7 (Save local changes)
-
+const filters = ["All", "Fresh Produce", "Grains", "Vegetables", "Fruits", "Spices", "Cotton", "Engineering Products", "Other Products"] as const;
 function ProductsPage() {
   const [f, setF] = useState<(typeof filters)[number]>("All");
   const list = products.filter((p) =>
